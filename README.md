@@ -1,10 +1,10 @@
 
 <p align="center">
   <a href="https://www.pling.com/p/2299736/">
-    <img alt="Earbud Compagnion" src="assets/Screenshot_20250630_104921.png" width="220"/>
+    <img alt="Earbud Companion" src="assets/Screenshot_20250630_104921.png" width="220"/>
   </a>
 </p>
-<h1 align="center">Earbud compagnion <i>- a plasma widget</i></h1>
+<h1 align="center">Earbud companion <i>- a plasma widget</i></h1>
 
 <img alt="Static Badge" src="https://img.shields.io/badge/Still_maintened-Yes_%3A)-green">
 
@@ -15,9 +15,11 @@ Very simple plugin that show if a earplug is connected and show relevant informa
 ### main feature
 
 - Custom color for the icon and the dot
-- Optional dot
+- Optional dot to show if a device is connected
 - Can be "show if relevant" via the systemtray (the intended usage)
 - Use `org.kde.bluezqt` to fetch the data and update status
+- `new` Dim the icon if no device is connected, the color is customizable
+- `new` Show the battery percentage at the bottom of the icon
 
 ## Installation
 
@@ -44,6 +46,6 @@ Do not hesitate to open a pr or an issue. I reply when I can.
 - [Give me a tips](https://github.com/sponsors/bouteillerAlan)
 - [Add a rating and a comment on Pling](https://www.pling.com/p/#/)
 - [Become a fan on Pling](https://www.pling.com/p/#/)
-- Or just participate to the developement :D
+- Or just participate to the development :D
 
 ### Thanks !
