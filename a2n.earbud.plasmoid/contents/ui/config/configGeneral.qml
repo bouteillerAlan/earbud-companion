@@ -9,6 +9,10 @@ Kirigami.ScrollablePage {
 
   property alias cfg_iconUseCustomColor: iconUseCustomColor.checked
   property alias cfg_iconColor: iconColor.color
+ 
+  property alias cfg_iconDim: iconDim.checked
+  property alias cfg_iconDimUseCustomColor: iconDimUseCustomColor.checked
+  property alias cfg_iconDimColor: iconDimColor.color
 
   property alias cfg_batPercentage: batPercentage.checked
 
@@ -48,6 +52,36 @@ Kirigami.ScrollablePage {
           enabled: iconUseCustomColor.checked
         }
       }
+    }
+
+    Kirigami.FormLayout {
+      Layout.alignment: Qt.AlignLeft
+      RowLayout {
+        Kirigami.FormData.label: "Dim icon when no device is connected: "
+        visible: true
+        Controls.CheckBox {
+          id: iconDim
+          checked: cfg_iconDim
+        }
+
+      }
+
+      RowLayout {
+        Kirigami.FormData.label: "Custom dim color: "
+        visible: true
+
+        Controls.CheckBox {
+          id: iconDimUseCustomColor
+          checked: cfg_iconDimUseCustomColor
+          visible: cfg_iconDim
+        }
+
+        KQuickControls.ColorButton {
+          id: iconDimColor
+          enabled: cfg_iconDim && iconDimUseCustomColor.checked
+        }
+      }
+
     }
 
     Kirigami.FormLayout {
