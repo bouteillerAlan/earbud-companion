@@ -24,7 +24,12 @@ http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
 <group name="displayConfigPage">
     <entry name="mainDot" type="Bool">
         <default>false</default>
+      </entry>
+
+    <entry name="batPercentage" type="Bool">
+        <default>false</default>
     </entry>
+
 
     <entry name="mainDotColor" type="String">
         <default>white</default>

@@ -36,6 +36,16 @@ Item {
       source: iconUpdate
     }
 
+    WorkspaceComponents.BadgeOverlay {
+      anchors {
+        bottom: container.bottom
+        right: container.right
+      }
+      text: audioDevices[0].data.batteryPercentage + '%'
+      visible: !plasmoid.configuration.mainDot && plasmoid.configuration.batPercentage && audioDevices.length > 0 && audioDevices[0].data.connected
+      icon: updateIcon
+    }
+
     Rectangle {
       visible: plasmoid.configuration.mainDot && audioDevices.length > 0 && audioDevices[0].data.connected
       height: container.height / 2.5

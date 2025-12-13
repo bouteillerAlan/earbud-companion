@@ -10,6 +10,8 @@ Kirigami.ScrollablePage {
   property alias cfg_iconUseCustomColor: iconUseCustomColor.checked
   property alias cfg_iconColor: iconColor.color
 
+  property alias cfg_batPercentage: batPercentage.checked
+
   property alias cfg_mainDot: mainDot.checked
   property alias cfg_mainDotUseCustomColor: mainDotUseCustomColor.checked
   property alias cfg_mainDotColor: mainDotColor.color
@@ -60,7 +62,7 @@ Kirigami.ScrollablePage {
 
     Kirigami.InlineMessage {
       Layout.fillWidth: true
-      text: "The dot is shown when a device is connected."
+      text: "Dot is shown when a device is connected."
       visible: true
     }
 
@@ -70,6 +72,7 @@ Kirigami.ScrollablePage {
         id: mainDot
         Kirigami.FormData.label: "Show dot: "
         checked: cfg_mainDot
+        enabled: !cfg_batPercentage
       }
 
       RowLayout {
@@ -86,5 +89,16 @@ Kirigami.ScrollablePage {
         }
       }
     }
+
+    Kirigami.FormLayout {
+      Layout.alignment: Qt.AlignLeft
+      Controls.CheckBox {
+        id: batPercentage
+        Kirigami.FormData.label: "Show battery percentage: "
+        checked: cfg_batPercentage
+        enabled: !cfg_mainDot
+      }
+    }
+
   }
 }
