@@ -1,5 +1,0 @@
-- [x] migrate from cmd to dbus
-- [ ] update config to remove any unused config key and input
-- [ ] update the readme
-- [ ] deploy new version
-- [ ] deploy on aur

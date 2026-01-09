@@ -125,7 +125,11 @@ PlasmoidItem {
 
     // handle the "show when relevant" property for the systray
     function hasUpdate() {
-        return audioDevices.length > 0 && audioDevices[0].data.connected;
+        const dlist = audioDevices;
+        if (dlist.lenght === 0) return false;
+        const actives = dlist.filter((item) => item.data.connected);
+        console.log("[A2N.EARBUD] actives:", JSON.stringify(actives), actives.length, actives);
+        return actives.length > 0;
     }
 
     Plasmoid.status: hasUpdate() ? PlasmaCore.Types.ActiveStatus : PlasmaCore.Types.PassiveStatus
